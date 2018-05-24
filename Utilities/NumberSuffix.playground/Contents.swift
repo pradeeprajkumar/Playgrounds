@@ -24,3 +24,20 @@ for index in -18...300 {
         print(value)
     }
 }
+
+import XCTest
+class IntTests: XCTestCase {
+    override func setUp() {
+        super.setUp()
+    }
+    
+    func testSuffixValue() {
+        XCTAssertEqual(300.suffixed(), "300th")
+    }
+    func testSuffixNilValue() {
+        var value = -18
+        XCTAssertEqual(value.suffixed(), "")
+    }
+}
+
+IntTests.defaultTestSuite.run()
