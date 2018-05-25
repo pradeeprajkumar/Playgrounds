@@ -13,7 +13,7 @@ class Employee: Decodable {
 
     required init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: EmployeeKeys.self)
-        for key in values.allKeys {
+        for _ in values.allKeys {
             name = try values.decode(String.self, forKey: .name)
             reportingTo = try values.decodeIfPresent(Employee.self, forKey: .reportingTo)
         }
@@ -23,7 +23,7 @@ class Employee: Decodable {
 
 do {
     guard let fileUrl = Bundle.main.url(forResource: "Employees", withExtension: "json") else { fatalError() }
-    var data = try Data(contentsOf: fileUrl)
+    let data = try Data(contentsOf: fileUrl)
 
     //Decoder
     let decoder = JSONDecoder()
