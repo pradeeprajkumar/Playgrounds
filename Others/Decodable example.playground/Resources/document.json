@@ -1,30 +1,30 @@
 {
-  "ArcoDiTraiano": {
-    "scheda_tecnica": {
+  "Developer": {
+    "tecnical": {
       "info_01": "Info 01",
       "info_02": "Info 02",
       "info_03": "Info 03",
       "info_04": "Info 04",
       "info_05": "Info 05"
     },
-    "descrizione": "Descrizione",
-    "iscrizione": "Iscrizione",
-    "materiali": "Materiali",
-    "notizie_storiche": "Notizie storiche",
-    "image": "string_image_name"
+    "description": "Description",
+    "inscription": "Inscription",
+    "materials": "Materials",
+    "notice": "Notice",
+    "image": "image_url"
   },
   "Tester": {
-    "scheda_tecnica": {
+    "tecnical": {
       "info_01": "Info 01",
       "info_02": "Info 02",
       "info_03": "Info 03",
       "info_04": "Info 04",
       "info_05": "Info 05"
     },
-    "descrizione": "Descrizione",
-    "iscrizione": "Iscrizione",
-    "materiali": "Materiali",
-    "notizie_storiche": "Notizie storiche",
-    "image": "string_image_name"
+    "description": "Description",
+    "inscription": "Inscription",
+    "materials": "Materials",
+    "notice": "Notice",
+    "image": "image_url"
   }
 }
