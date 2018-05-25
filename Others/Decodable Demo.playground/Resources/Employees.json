@@ -1,22 +1,22 @@
 {
     "name": "Pradeep",
     "role": "Developer",
-    "Employee": {
+    "_employee": {
         "name": "Bhargav",
         "role": "Senior",
-        "Employee": {
+        "_employee": {
             "name": "Sanjay",
             "role": "Lead",
-            "Employee": {
+            "_employee": {
                 "name": "Manish",
                 "role": "Manager",
-                "Employee": {
+                "_employee": {
                     "name": "Anshul",
                     "role": "CEO",
-                    "Employee": {
+                    "_employee": {
                         "name": "Kumaraswamy",
                         "role": "CM",
-                        "Employee": {
+                        "_employee": {
                             "name": "Modi",
                             "role": "PM"
                         }

@@ -5,19 +5,12 @@ import Foundation
 class Employee: Decodable {
     var name: String
     var role: String
-    var reportingTo: Employee?
+    var employee: Employee?
 
-    enum EmployeeKeys: String, CodingKey {
+    enum CodingKeys: String, CodingKey {
         case name
         case role
-        case reportingTo = "Employee"
-    }
-
-    required init(from decoder: Decoder) throws {
-        let values = try decoder.container(keyedBy: EmployeeKeys.self)
-        name = try values.decode(String.self, forKey: .name)
-        role = try values.decode(String.self, forKey: .role)
-        reportingTo = try values.decodeIfPresent(Employee.self, forKey: .reportingTo)
+        case employee = "_employee"
     }
 }
 
@@ -29,10 +22,29 @@ do {
     //Decoder
     let decoder = JSONDecoder()
     if let decodedEmployee = try? decoder.decode(Employee.self, from: data) {
-        if let ceoObject = decodedEmployee.reportingTo?.reportingTo?.reportingTo?.reportingTo {
+        if let ceoObject = decodedEmployee.employee?.employee?.employee?.employee {
             print(ceoObject.name, "is", ceoObject.role)
         }
     }
-} catch DecodingError.keyNotFound(let key, let context) {
-    print(key, context)
+} catch {
+    print("Exception found")
 }
+
+
+/*
+ /*
+     init(name: String, role: String, employee: Employee) {
+         self.name = name
+         self.role = role
+         self.employee = employee
+     }
+ 
+    required init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: EmployeeKeys.self)
+ 
+         name = try values.decode(String.self, forKey: .name)
+         role = try values.decode(String.self, forKey: .role)
+         reportingTo = try values.decodeIfPresent(Employee.self, forKey: .reportingTo)
+    }
+ */
+ */

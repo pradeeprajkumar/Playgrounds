@@ -1,0 +1,626 @@
+{
+    "res_str": "Category added successfully.",
+    "res_code": "Categories fetched successfully.",
+    "res_data": {
+        "categories": [
+                       {
+                       "is_deleted": 0,
+                       "description": "Ghoomna",
+                       "parent": null,
+                       "questions": [
+                       
+                       ],
+                       "mcc_codes": [
+                       
+                       ],
+                       "state": 1,
+                       "root_category": 769,
+                       "child": [
+                       
+                       ],
+                       "id": 769,
+                       "name": "Travel"
+                       },
+                       {
+                       "is_deleted": 0,
+                       "description": "Pelna",
+                       "parent": null,
+                       "questions": [
+                       
+                       ],
+                       "mcc_codes": [
+                       
+                       ],
+                       "state": 1,
+                       "root_category": 770,
+                       "child": [
+                       
+                       ],
+                       "id": 770,
+                       "name": "Food"
+                       },
+                       {
+                       "is_deleted": 0,
+                       "description": "Aish Karna",
+                       "parent": null,
+                       "questions": [
+                       
+                       ],
+                       "mcc_codes": [
+                       
+                       ],
+                       "state": 1,
+                       "root_category": 772,
+                       "child": [
+                       
+                       ],
+                       "id": 772,
+                       "name": "Personal"
+                       },
+                       {
+                       "is_deleted": 0,
+                       "description": "Higher Level grades",
+                       "parent": null,
+                       "questions": [
+                       
+                       ],
+                       "mcc_codes": [
+                       
+                       ],
+                       "state": 1,
+                       "root_category": 773,
+                       "child": [
+                                 {
+                                 "is_deleted": 0,
+                                 "description": "VP and Above",
+                                 "parent": 773,
+                                 "questions": [
+                                 
+                                 ],
+                                 "mcc_codes": [
+                                 
+                                 ],
+                                 "state": 1,
+                                 "root_category": 773,
+                                 "child": [
+                                 
+                                 ],
+                                 "id": 777,
+                                 "name": "VP and Above"
+                                 },
+                                 {
+                                 "is_deleted": 0,
+                                 "description": "GM & AVP",
+                                 "parent": 773,
+                                 "questions": [
+                                 
+                                 ],
+                                 "mcc_codes": [
+                                 
+                                 ],
+                                 "state": 1,
+                                 "root_category": 773,
+                                 "child": [
+                                 
+                                 ],
+                                 "id": 778,
+                                 "name": "GM & AVP"
+                                 },
+                                 {
+                                 "is_deleted": 0,
+                                 "description": "DGM & AGM  ( Grade E3 and E4)",
+                                 "parent": 773,
+                                 "questions": [
+                                 
+                                 ],
+                                 "mcc_codes": [
+                                 
+                                 ],
+                                 "state": 1,
+                                 "root_category": 773,
+                                 "child": [
+                                 
+                                 ],
+                                 "id": 779,
+                                 "name": "DGM & AGM"
+                                 },
+                                 {
+                                 "is_deleted": 0,
+                                 "description": "MGR & SM (Grade E1 & E2)",
+                                 "parent": 773,
+                                 "questions": [
+                                 
+                                 ],
+                                 "mcc_codes": [
+                                 
+                                 ],
+                                 "state": 1,
+                                 "root_category": 773,
+                                 "child": [
+                                 
+                                 ],
+                                 "id": 780,
+                                 "name": "MGR & SM"
+                                 },
+                                 {
+                                 "is_deleted": 0,
+                                 "description": "MGR & SM",
+                                 "parent": 773,
+                                 "questions": [
+                                 
+                                 ],
+                                 "mcc_codes": [
+                                 
+                                 ],
+                                 "state": 1,
+                                 "root_category": 773,
+                                 "child": [
+                                 
+                                 ],
+                                 "id": 781,
+                                 "name": "Asst. Mgr , Dept Mgr"
+                                 },
+                                 {
+                                 "is_deleted": 0,
+                                 "description": "Officer & Engr",
+                                 "parent": 773,
+                                 "questions": [
+                                 
+                                 ],
+                                 "mcc_codes": [
+                                 
+                                 ],
+                                 "state": 1,
+                                 "root_category": 773,
+                                 "child": [
+                                 
+                                 ],
+                                 "id": 783,
+                                 "name": "Asst officer"
+                                 },
+                                 {
+                                 "is_deleted": 0,
+                                 "description": "Officer & Engr",
+                                 "parent": 773,
+                                 "questions": [
+                                 
+                                 ],
+                                 "mcc_codes": [
+                                 
+                                 ],
+                                 "state": 1,
+                                 "root_category": 773,
+                                 "child": [
+                                 
+                                 ],
+                                 "id": 782,
+                                 "name": "Officer & Engr"
+                                 }
+                                 ],
+                       "id": 773,
+                       "name": "Grade"
+                       },
+                       {
+                       "is_deleted": 0,
+                       "description": "Incidental expense ( without bills)",
+                       "parent": null,
+                       "questions": [
+                       
+                       ],
+                       "mcc_codes": [
+                       
+                       ],
+                       "state": 1,
+                       "root_category": 775,
+                       "child": [
+                       
+                       ],
+                       "id": 775,
+                       "name": "Incidental expense ( without bills)"
+                       },
+                       {
+                       "is_deleted": 0,
+                       "description": "reimbursement of expenses towards food & beverages during journey (limit per day)",
+                       "parent": null,
+                       "questions": [
+                       
+                       ],
+                       "mcc_codes": [
+                       
+                       ],
+                       "state": 1,
+                       "root_category": 776,
+                       "child": [
+                       
+                       ],
+                       "id": 776,
+                       "name": "reimbursement of expenses towards food & beverages during journey (limit per day)"
+                       },
+                       {
+                       "is_deleted": 0,
+                       "description": "Utilities",
+                       "parent": null,
+                       "questions": [
+                       
+                       ],
+                       "mcc_codes": [
+                                     {
+                                     "code_category_name": "Utilities",
+                                     "code": 4900,
+                                     "id": 90,
+                                     "description": "Utilities"
+                                     }
+                                     ],
+                       "state": 2,
+                       "root_category": 3214,
+                       "child": [
+                       
+                       ],
+                       "id": 3214,
+                       "name": "Utilities"
+                       },
+                       {
+                       "is_deleted": 0,
+                       "description": "Goodies",
+                       "parent": null,
+                       "questions": [
+                       
+                       ],
+                       "mcc_codes": [
+                       
+                       ],
+                       "state": 1,
+                       "root_category": 3095,
+                       "child": [
+                       
+                       ],
+                       "id": 3095,
+                       "name": "Goodies"
+                       },
+                       {
+                       "is_deleted": 0,
+                       "description": "testing for the bug",
+                       "parent": null,
+                       "questions": [
+                       
+                       ],
+                       "mcc_codes": [
+                       
+                       ],
+                       "state": 1,
+                       "root_category": 3096,
+                       "child": [
+                       
+                       ],
+                       "id": 3096,
+                       "name": "New Test Satya"
+                       },
+                       {
+                       "is_deleted": 0,
+                       "description": "chesla",
+                       "parent": null,
+                       "questions": [
+                       
+                       ],
+                       "mcc_codes": [
+                       
+                       ],
+                       "state": 1,
+                       "root_category": 3097,
+                       "child": [
+                       
+                       ],
+                       "id": 3097,
+                       "name": "Chesla"
+                       },
+                       {
+                       "is_deleted": 0,
+                       "description": "",
+                       "parent": null,
+                       "questions": [
+                       
+                       ],
+                       "mcc_codes": [
+                       
+                       ],
+                       "state": 1,
+                       "root_category": 19360,
+                       "child": [
+                                 {
+                                 "is_deleted": 0,
+                                 "description": "",
+                                 "parent": 19360,
+                                 "questions": [
+                                 
+                                 ],
+                                 "mcc_codes": [
+                                 
+                                 ],
+                                 "state": 1,
+                                 "root_category": 19360,
+                                 "child": [
+                                           {
+                                           "is_deleted": 0,
+                                           "description": "",
+                                           "parent": 19361,
+                                           "questions": [
+                                           
+                                           ],
+                                           "mcc_codes": [
+                                           
+                                           ],
+                                           "state": 1,
+                                           "root_category": 19360,
+                                           "child": [
+                                           
+                                           ],
+                                           "id": 19362,
+                                           "name": "Creta"
+                                           }
+                                           ],
+                                 "id": 19361,
+                                 "name": "Automatic"
+                                 },
+                                 {
+                                 "is_deleted": 0,
+                                 "description": "",
+                                 "parent": 19360,
+                                 "questions": [
+                                 
+                                 ],
+                                 "mcc_codes": [
+                                 
+                                 ],
+                                 "state": 1,
+                                 "root_category": 19360,
+                                 "child": [
+                                           {
+                                           "is_deleted": 0,
+                                           "description": "",
+                                           "parent": 19363,
+                                           "questions": [
+                                           
+                                           ],
+                                           "mcc_codes": [
+                                           
+                                           ],
+                                           "state": 2,
+                                           "root_category": 19360,
+                                           "child": [
+                                           
+                                           ],
+                                           "id": 19364,
+                                           "name": "Duster"
+                                           }
+                                           ],
+                                 "id": 19363,
+                                 "name": "Manual"
+                                 }
+                                 ],
+                       "id": 19360,
+                       "name": "Vehicle"
+                       },
+                       {
+                       "is_deleted": 0,
+                       "description": "to test",
+                       "parent": null,
+                       "questions": [
+                       
+                       ],
+                       "mcc_codes": [
+                       
+                       ],
+                       "state": 1,
+                       "root_category": 18695,
+                       "child": [
+                       
+                       ],
+                       "id": 18695,
+                       "name": "test 1"
+                       },
+                       {
+                       "is_deleted": 0,
+                       "description": "Cellular telecommunications",
+                       "parent": null,
+                       "questions": [
+                       
+                       ],
+                       "mcc_codes": [
+                                     {
+                                     "code_category_name": "Cellular telecommunications",
+                                     "code": 4814,
+                                     "id": 75,
+                                     "description": "Cellular telecommunications"
+                                     }
+                                     ],
+                       "state": 1,
+                       "root_category": 3208,
+                       "child": [
+                       
+                       ],
+                       "id": 3208,
+                       "name": "Mobile Prepaid"
+                       },
+                       {
+                       "is_deleted": 0,
+                       "description": "",
+                       "parent": null,
+                       "questions": [
+                       
+                       ],
+                       "mcc_codes": [
+                       
+                       ],
+                       "state": 1,
+                       "root_category": 3772,
+                       "child": [
+                       
+                       ],
+                       "id": 3772,
+                       "name": "Sudexo"
+                       },
+                       {
+                       "is_deleted": 0,
+                       "description": "Motion Picture Theaters",
+                       "parent": null,
+                       "questions": [
+                       
+                       ],
+                       "mcc_codes": [
+                                     {
+                                     "code_category_name": "Motion Picture Theaters",
+                                     "code": 7832,
+                                     "id": 62,
+                                     "description": "Motion Picture Theaters"
+                                     }
+                                     ],
+                       "state": 1,
+                       "root_category": 3210,
+                       "child": [
+                       
+                       ],
+                       "id": 3210,
+                       "name": "Movies"
+                       },
+                       {
+                       "is_deleted": 0,
+                       "description": "Schools and Educational Services",
+                       "parent": null,
+                       "questions": [
+                       
+                       ],
+                       "mcc_codes": [
+                                     {
+                                     "code_category_name": "Schools and Educational Services",
+                                     "code": 8299,
+                                     "id": 53,
+                                     "description": "Schools and Educational Services"
+                                     }
+                                     ],
+                       "state": 1,
+                       "root_category": 3211,
+                       "child": [
+                       
+                       ],
+                       "id": 3211,
+                       "name": "Fee Payment and New Registration Fee"
+                       },
+                       {
+                       "is_deleted": 0,
+                       "description": "Tours and Travel Agencies",
+                       "parent": null,
+                       "questions": [
+                       
+                       ],
+                       "mcc_codes": [
+                                     {
+                                     "code_category_name": "Tours and Travel Agencies",
+                                     "code": 4722,
+                                     "id": 54,
+                                     "description": "Tours and Travel Agencies"
+                                     }
+                                     ],
+                       "state": 1,
+                       "root_category": 3212,
+                       "child": [
+                       
+                       ],
+                       "id": 3212,
+                       "name": "Flight"
+                       },
+                       {
+                       "is_deleted": 0,
+                       "description": "",
+                       "parent": null,
+                       "questions": [
+                       
+                       ],
+                       "mcc_codes": [
+                                     {
+                                     "code_category_name": "Local Transportation",
+                                     "code": 4111,
+                                     "id": 33,
+                                     "description": "Local Transportation"
+                                     },
+                                     {
+                                     "code_category_name": "Passenger Railways",
+                                     "code": 4112,
+                                     "id": 34,
+                                     "description": "Passenger Railways"
+                                     }
+                                     ],
+                       "state": 1,
+                       "root_category": 3403,
+                       "child": [
+                       
+                       ],
+                       "id": 3403,
+                       "name": "Expenses"
+                       },
+                       {
+                       "is_deleted": 0,
+                       "description": "",
+                       "parent": null,
+                       "questions": [
+                       
+                       ],
+                       "mcc_codes": [
+                                     {
+                                     "code_category_name": "Universities and Professional Schools",
+                                     "code": 8220,
+                                     "id": 37,
+                                     "description": "Universities and Professional Schools"
+                                     }
+                                     ],
+                       "state": 1,
+                       "root_category": 3405,
+                       "child": [
+                       
+                       ],
+                       "id": 3405,
+                       "name": "Expenses1"
+                       },
+                       {
+                       "is_deleted": 0,
+                       "description": "Staying",
+                       "parent": null,
+                       "questions": [
+                       
+                       ],
+                       "mcc_codes": [
+                       
+                       ],
+                       "state": 1,
+                       "root_category": 7508,
+                       "child": [
+                       
+                       ],
+                       "id": 7508,
+                       "name": "Staying"
+                       },
+                       {
+                       "is_deleted": 0,
+                       "description": "General Stores ",
+                       "parent": null,
+                       "questions": [
+                       
+                       ],
+                       "mcc_codes": [
+                                     {
+                                     "code_category_name": "General Stores",
+                                     "code": 5399,
+                                     "id": 86,
+                                     "description": "General Stores"
+                                     }
+                                     ],
+                       "state": 1,
+                       "root_category": 3215,
+                       "child": [
+                       
+                       ],
+                       "id": 3215,
+                       "name": "Mobile Postpaid / PAYTM"
+                       }
+                       ]
+    }
+}
