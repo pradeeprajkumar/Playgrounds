@@ -2,16 +2,27 @@
 
 import Foundation
 
+class Organisation: Decodable {
+    var companyName: String
+    var domain: String
+
+    enum CodingKeys: String, CodingKey {
+        case companyName = "company_name"
+        case domain
+    }
+}
+
 class Employee: Decodable {
     var name: String
     var role: String
-    var employee: Employee?
-
+    var belongsTo: Organisation?
+    
     enum CodingKeys: String, CodingKey {
         case name
         case role
-        case employee = "_employee"
+        case belongsTo = "organisation"
     }
+    
 }
 
 
@@ -22,9 +33,8 @@ do {
     //Decoder
     let decoder = JSONDecoder()
     if let decodedEmployee = try? decoder.decode(Employee.self, from: data) {
-        if let ceoObject = decodedEmployee.employee?.employee?.employee?.employee {
-            print(ceoObject.name, "is", ceoObject.role)
-        }
+        print(decodedEmployee.name, decodedEmployee.role)
+        print(decodedEmployee.belongsTo?.companyName, decodedEmployee.belongsTo?.domain)
     }
 } catch {
     print("Exception found")

@@ -1,28 +1,11 @@
 {
     "name": "Pradeep",
     "role": "Developer",
-    "_employee": {
-        "name": "Bhargav",
-        "role": "Senior",
-        "_employee": {
-            "name": "Sanjay",
-            "role": "Lead",
-            "_employee": {
-                "name": "Manish",
-                "role": "Manager",
-                "_employee": {
-                    "name": "Anshul",
-                    "role": "CEO",
-                    "_employee": {
-                        "name": "Kumaraswamy",
-                        "role": "CM",
-                        "_employee": {
-                            "name": "Modi",
-                            "role": "PM"
-                        }
-                    }
-                }
-            }
-        }
+    "organisation": {
+        "company_name": "Happay",
+        "domain": "Finance",
+        "employees": [
+        
+        ]
     }
 }
