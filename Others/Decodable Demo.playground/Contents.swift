@@ -3,20 +3,21 @@
 import Foundation
 
 class Employee: Decodable {
-    var name: String?
+    var name: String
+    var role: String
     var reportingTo: Employee?
 
     enum EmployeeKeys: String, CodingKey {
         case name
+        case role
         case reportingTo = "Employee"
     }
 
     required init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: EmployeeKeys.self)
-        for _ in values.allKeys {
-            name = try values.decode(String.self, forKey: .name)
-            reportingTo = try values.decodeIfPresent(Employee.self, forKey: .reportingTo)
-        }
+        name = try values.decode(String.self, forKey: .name)
+        role = try values.decode(String.self, forKey: .role)
+        reportingTo = try values.decodeIfPresent(Employee.self, forKey: .reportingTo)
     }
 }
 
@@ -28,7 +29,9 @@ do {
     //Decoder
     let decoder = JSONDecoder()
     if let decodedEmployee = try? decoder.decode(Employee.self, from: data) {
-        print(decodedEmployee.reportingTo?.reportingTo?.reportingTo?.reportingTo?.name)
+        if let ceoObject = decodedEmployee.reportingTo?.reportingTo?.reportingTo?.reportingTo {
+            print(ceoObject.name, "is", ceoObject.role)
+        }
     }
 } catch DecodingError.keyNotFound(let key, let context) {
     print(key, context)
