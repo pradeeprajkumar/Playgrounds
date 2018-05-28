@@ -1,6 +1,9 @@
 import Foundation
 
 func sortByHeight(a: [Int]) -> [Int] {
+    
+    let startTime = Date.timeIntervalSinceReferenceDate
+    
     //Space complexity: (2n)
     //We created one result array, and one sorted array
     var resultArray: [Int] = []
@@ -26,7 +29,8 @@ func sortByHeight(a: [Int]) -> [Int] {
         }
     }
     
+    print("Time taken: \(Date.timeIntervalSinceReferenceDate - startTime) seconds")
     return resultArray
 }
 
-print(sortByHeight(a: [-1, 150, 190, 170, -1, -1, 160, 180]))
+print("Result: \(sortByHeight(a: [-1, 150, 190, 170, -1, -1, 160, 180]))")
