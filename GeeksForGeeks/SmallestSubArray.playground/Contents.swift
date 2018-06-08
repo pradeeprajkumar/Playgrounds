@@ -20,4 +20,4 @@ func smallestArrayCountBruteForce(inputArray: [Int]) -> Int {
 }
 
 
-print(smallestArrayCountBruteForce(array1))
+print(smallestArrayCountBruteForce(inputArray: array1))
