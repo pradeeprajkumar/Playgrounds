@@ -11,7 +11,7 @@ for index in 0..<5 where index % 2 == 0 {
 
 //Stride by excludes the last element
 //Stride by a positive number to iterate the array in increasing order
-for index in stride(from: 5, to: 10, by: 1) {
+for index in stride(from: 5, to: 100, by: 5) {
     print(index)
 }
 //Stride through includes the last element
