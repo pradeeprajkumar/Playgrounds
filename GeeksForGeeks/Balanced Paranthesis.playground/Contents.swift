@@ -1,12 +1,15 @@
 
 func isBalancedParanthesis(paranthesis: String) -> Bool {
     var stack: [Character] = []
+    let parathesisDictionary: [String:String] = [")": "(",
+                                                 "}": "{",
+                                                 "]": "["]
     for char in paranthesis {
-        if isOpenParanthesis(char: char) {
+        if parathesisDictionary.values.contains("\(char)") {//Open parathensis
             //Push
             stack.append(char)
-        } else if isClosedParanthesis(char: char) {
-            if (char == ")" && stack.peek() == "(") || (char == "}" && stack.peek() == "{") || (char == "]" && stack.peek() == "[") {
+        } else if parathesisDictionary.keys.contains("\(char)") {//Closed paranthesis
+            if parathesisDictionary["\(char)"] == stack.peek() {
                 //Pop
                 stack.removeLast()
             } else {
@@ -30,12 +33,5 @@ extension Array {
     }
 }
 
-func isOpenParanthesis(char: Character) -> Bool {
-    return "({[".contains(char)
-}
 
-func isClosedParanthesis(char: Character) -> Bool {
-    return ")}]".contains(char)
-}
-
-print(isBalancedParanthesis(paranthesis: "({[]}{]}[()])"))
+print(isBalancedParanthesis(paranthesis: "{(})"))
