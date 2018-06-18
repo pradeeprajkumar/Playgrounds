@@ -31,4 +31,4 @@ func subArraySum(array: [Int], sum: Int) -> Bool {
     return false
 }
 
-print(subArraySum(array: [1,4,0,0,3,10,5], sum: 7))
+//print(subArraySum(array: [1,4,0,0,3,10,5], sum: 7))
