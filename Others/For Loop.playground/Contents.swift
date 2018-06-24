@@ -1,4 +1,5 @@
 
+
 for index in 0...5 where index % 2 != 0 {
     //Prints the odd numbers from 0 to 5 including the last value in the range
     print(index)
@@ -23,3 +24,4 @@ for index in stride(from: 5, through: 10, by: 1){
 for index in stride(from: 12, to: 0, by: -2) {
     print(index)
 }
+
