@@ -1,5 +1,7 @@
 import Foundation
-func binarySearch(inputArray: [Int], searchValue: Int) -> Bool {
+
+//Generic binary search
+func binarySearch<T: Comparable>(inputArray: [T], searchValue: T) -> Bool {
     if inputArray.count <= 1 {
         return inputArray.first == searchValue
     }
@@ -15,4 +17,8 @@ func binarySearch(inputArray: [Int], searchValue: Int) -> Bool {
     return true
 }
 
-print(binarySearch(inputArray: [1,2,3,5,7,8,9,11,14,15,16], searchValue: 3))
+//Int
+print(binarySearch(inputArray: [1, 2, 3, 5, 7, 8, 9, 11, 14, 15, 16], searchValue: 3))
+
+//Double
+print(binarySearch(inputArray: [1.1, 2.01, 3.6, 5.8, 7.3, 8.6, 9.5, 11, 14, 15, 16], searchValue: 8.6))
