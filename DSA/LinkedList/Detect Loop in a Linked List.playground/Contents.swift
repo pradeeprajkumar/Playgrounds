@@ -1,9 +1,9 @@
 //A node in Linked List
-class Node {
-    var value: Int
+class Node<T: Numeric> {
+    var value: T?
     var next: Node?
 
-    init(value: Int, next: Node?) {
+    init(value: T, next: Node?) {
         self.value = value
         self.next = next
     }
@@ -29,18 +29,18 @@ extension Node: CustomStringConvertible {
 
 //Linked list implementation
 struct LinkedList {
-    var head: Node?
+    var head: Node<Int>?
     init(_ inputArray: [Int]) {
         head = createWith(inputArray)
     }
 }
 extension LinkedList {
     //Create a linked list from an array and return the head node
-    func createWith(_ inputArray: [Int]) -> Node? {
-        return inputArray.count > 0 ? Node(value: inputArray.first!, next: createWith(Array(inputArray[1...]))) : nil
+    func createWith(_ inputArray: [Int]) -> Node<Int>? {
+        return inputArray.count > 0 ? Node<Int>(value: inputArray.first!, next: createWith(Array(inputArray[1...]))) : nil
     }
     
-    func lastNode() -> Node? {
+    func lastNode() -> Node<Int>? {
         var currentNode = head
         while currentNode?.next != nil {
             currentNode = currentNode?.next
@@ -48,7 +48,7 @@ extension LinkedList {
         return currentNode
     }
     
-    func middleNode() -> Node? {
+    func middleNode() -> Node<Int>? {
         var slowNode = head
         var fastNode = head?.next
         while fastNode?.next?.next != nil {
