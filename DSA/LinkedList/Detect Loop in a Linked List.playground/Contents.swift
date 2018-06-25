@@ -23,10 +23,7 @@ extension Node: Equatable {
 
 extension Node: CustomStringConvertible {
     var description: String {
-        if value != nil {
-            return "value: \(value!) next -> \(next != nil)"
-        }
-        return "value is nil"
+        return value != nil ? "value: \(value!) next -> \(next != nil)" : "value is nil"
     }
 }
 
@@ -36,21 +33,22 @@ struct LinkedList<T: Equatable> {
     init(_ inputArray: [T]) {
         head = createWith(inputArray)
     }
+    
+    lazy var lastNode: Node<T>? = {
+        var currentNode = head
+        while currentNode?.next != nil {
+            currentNode = currentNode?.next
+        }
+        return currentNode
+    }()
+    
 }
 extension LinkedList {
     //Create a linked list from an array and return the head node
     func createWith(_ inputArray: [T]) -> Node<T>? {
         return inputArray.count > 0 ? Node<T>(value: inputArray.first!, next: createWith(Array(inputArray[1...]))) : nil
     }
-    
-    func lastNode() -> Node<T>? {
-        var currentNode = head
-        while currentNode?.next != nil {
-            currentNode = currentNode?.next
-        }
-        return currentNode
-    }
-    
+
     func middleNode() -> Node<T>? {
         var slowNode = head
         var fastNode = head?.next
@@ -92,7 +90,7 @@ extension LinkedList {
 //Linked List creation
 //let list = LinkedList([1, 2, 3, 4, 5, 6, 7, 8])
 let list2 = LinkedList([1.1, 2.2, 3.3, 4.4, 5.5, 6.6, 7, 8.8])
-let list = LinkedList(["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"])
+var list = LinkedList(["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"])
 
 
 if let head = list.head {
@@ -101,7 +99,7 @@ if let head = list.head {
 
 print("Is looping: \(list.isLooping())")
 
-var lastNode = list.lastNode()
+var lastNode = list.lastNode
 print("last node: \(lastNode!)")
 lastNode?.next = list.middleNode()
 print("middle node: \(lastNode!.next!)")
