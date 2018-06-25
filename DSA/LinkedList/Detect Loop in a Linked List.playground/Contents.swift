@@ -1,5 +1,5 @@
 //A node in Linked List
-class Node<T: Numeric> {
+class Node<T: Equatable> {
     var value: T?
     var next: Node?
 
@@ -23,12 +23,15 @@ extension Node: Equatable {
 
 extension Node: CustomStringConvertible {
     var description: String {
-        return "value: \(value) next -> \(next != nil)"
+        if value != nil {
+            return "value: \(value!) next -> \(next != nil)"
+        }
+        return "value is nil"
     }
 }
 
 //Linked list implementation
-struct LinkedList<T: Numeric> {
+struct LinkedList<T: Equatable> {
     var head: Node<T>?
     init(_ inputArray: [T]) {
         head = createWith(inputArray)
@@ -87,7 +90,11 @@ extension LinkedList {
 }
 
 //Linked List creation
-let list = LinkedList([1.5, 2.4, 3.3, 4.6, 5.3, 6.3, 7, 8.9])
+//let list = LinkedList([1, 2, 3, 4, 5, 6, 7, 8])
+let list2 = LinkedList([1.1, 2.2, 3.3, 4.4, 5.5, 6.6, 7, 8.8])
+let list = LinkedList(["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"])
+
+
 if let head = list.head {
     print(head)
 }
