@@ -1,23 +1,11 @@
 //A node in Linked List
-class Node<T: Equatable> {
+class Node<T> {
     var value: T?
     var next: Node?
 
     init(value: T, next: Node?) {
         self.value = value
         self.next = next
-    }
-}
-
-extension Node: Equatable {
-    static func == (lhs: Node, rhs: Node) -> Bool {
-        //TODO: Do the memory comparison
-        /*
-        withUnsafePointer(to: &lhs.next) {
-            print($0)
-        }
-         */
-        return lhs.value == rhs.value
     }
 }
 
@@ -28,7 +16,7 @@ extension Node: CustomStringConvertible {
 }
 
 //Linked list implementation
-struct LinkedList<T: Equatable> {
+struct LinkedList<T> {
     var head: Node<T>?
     init(_ inputArray: [T]) {
         head = createWith(inputArray)
@@ -67,7 +55,7 @@ extension LinkedList {
         var slowNode = head
         var fastNode = head?.next
         while fastNode != nil {
-            if slowNode == fastNode {
+            if slowNode === fastNode {
                 return true
             }
             slowNode = slowNode?.next
