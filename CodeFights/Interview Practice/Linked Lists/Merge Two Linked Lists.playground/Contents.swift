@@ -53,5 +53,22 @@ func mergeTwoLinkedLists(l1: ListNode<Int>?, l2: ListNode<Int>?) -> ListNode<Int
 
 let left = createList(inputArray: [1, 1, 2, 5])
 let right = createList(inputArray: [])
-var resultList = mergeTwoLinkedLists(l1: left, l2: right)
+//var resultList = mergeTwoLinkedLists(l1: left, l2: right)
+//resultList?.printNodes()
+
+
+
+func mergeTwoLinkedLists2(l1: ListNode<Int>?, l2: ListNode<Int>?) -> ListNode<Int>? {
+    if l1 == nil { return l2 }
+    if l2 == nil { return l1 }
+    
+    if l1!.value < l2!.value {
+        l1?.next = mergeTwoLinkedLists2(l1: l1?.next, l2: l2)
+        return l1
+    } else {
+        l2?.next = mergeTwoLinkedLists2(l1: l1, l2: l2?.next)
+        return l2
+    }
+}
+var resultList = mergeTwoLinkedLists2(l1: left, l2: right)
 resultList?.printNodes()
