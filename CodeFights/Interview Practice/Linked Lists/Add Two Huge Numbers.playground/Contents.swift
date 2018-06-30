@@ -66,12 +66,17 @@ func addTwoHugeNumbers(a: ListNode<Int>?, b: ListNode<Int>?) -> ListNode<Int>? {
     let leftCount = lengthOfList(head: a)
     let rightCount = lengthOfList(head: b)
     var left = a, right = b
-    if leftCount > rightCount {
+    if leftCount == 0 {
+        return right
+    } else if rightCount == 0 {
+        return left
+    }
+    else if leftCount > rightCount {
         right = prefix(list: b, times: leftCount - rightCount)
     } else if rightCount > leftCount {
         left = prefix(list: a, times: rightCount - leftCount)
     }
-
+    //Now both the lists are of same size
     let resultTuple = recursivelyAddTwoNumbers(left, right)
     if resultTuple.carryForward > 0 {
         let newHead = ListNode<Int>(resultTuple.carryForward)
