@@ -66,3 +66,21 @@ func reverseNodesInKGroups(l: ListNode<Int>?, k: Int) -> ListNode<Int>? {
 var list = createList(inputArray: [30, 20, 10, 60, 50, 40, 70, 80])
 let reversed = reverseNodesInKGroups(l: list, k: 3)
 reversed?.printList()
+print("\n")
+func reverseNodesIteratively(l: ListNode<Int>?) -> ListNode<Int>? {
+    var newHead: ListNode<Int>?
+    var curr = l
+    var temp = curr?.next
+
+    while curr != nil {
+        curr?.next = newHead
+        newHead = curr
+        curr = temp
+        temp = temp?.next
+    }
+    return newHead
+}
+
+var list2 = createList(inputArray: [1, 2, 3, 4, 5, 6])
+var reversed2 = reverseNodesIteratively(l: list2)
+reversed2?.printList()
