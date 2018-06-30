@@ -24,9 +24,6 @@ extension ListNode {
     }
 }
 
-var list = createList(inputArray: [30, 20, 10, 60, 50, 40, 70, 80])
-//list?.printList()
-
 func reverseNodesInKGroups(l: ListNode<Int>?, k: Int) -> ListNode<Int>? {
     var prevNode: ListNode<Int>?, head: ListNode<Int>?
     var restNode = l
@@ -66,5 +63,6 @@ func reverseNodesInKGroups(l: ListNode<Int>?, k: Int) -> ListNode<Int>? {
     return head
 }
 
+var list = createList(inputArray: [30, 20, 10, 60, 50, 40, 70, 80])
 let reversed = reverseNodesInKGroups(l: list, k: 3)
 reversed?.printList()
