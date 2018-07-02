@@ -16,7 +16,7 @@ func sumOfTwo(a: [Int], b: [Int], v: Int) -> Bool {
 //Space complexity: O(m)
 //In dictionary, complexity of getting a value is O(1)
 func sumOfTwo2(a: [Int], b: [Int], v: Int) -> Bool {
-    var dictionary: [Int: Bool] = [:]    
+    var dictionary: [Int: Bool] = [:]
     for value in a {
         dictionary[value] = true
     }
@@ -29,7 +29,7 @@ func sumOfTwo2(a: [Int], b: [Int], v: Int) -> Bool {
 }
 
 //Logic: Sort array B, and use Binary search to find the difference value
-//Time complexity: O(n.logn) + O(n.logn)
+//Time complexity: O(n.logn) + O(n.logn) => Sorting + n times Binary search
 //Space complexity: O(1)
 func sumOfTwo3(a: [Int], b: [Int], v: Int) -> Bool {
     let sortedB = b.sorted()
