@@ -1,19 +1,14 @@
 func maxPoints(matches: Int, goalsFor: Int, goalsAgainst: Int) -> Int {
-    if goalsFor - goalsAgainst >= matches {
-        return matches * 3
-    } else if goalsFor > goalsAgainst {
-        //For the draw match
-        if (goalsFor - goalsAgainst) >= (matches - 1) {
-            return (matches - 1) * 3 + 1
-        }
-    } else if goalsFor == goalsAgainst {
-        if matches <= 1 {
-            return 1
-        }
+    var matchWins = 0, matchDraws = 0
+    let difference = goalsFor - goalsAgainst
+    matchWins = difference >= matches ? matches : matches - 1
+    
+    matchDraws = difference >= matches && matchWins != matches ? 1 : 0
+    if difference == 0 && matches == 1 {
+        matchDraws = 1
     }
-    return (matches - 1) * 3
+    
+    return matchWins * 3 + matchDraws
 }
 
-
-
-print(maxPoints(matches: 2, goalsFor: 3, goalsAgainst: 3))
+print(maxPoints(matches: 2, goalsFor: 3, goalsAgainst: 2))
