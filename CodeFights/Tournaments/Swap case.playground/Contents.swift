@@ -35,5 +35,11 @@ func swapCase(text: String) -> String {
 print(swapCase(text: "Hello"))
 */
 import Foundation
-var stringValue = "HThis.PDF"
+var stringValue = "HThipdgiffs.gif"
 print(stringValue.suffix(3))
+print(stringValue.hasSuffix("gif"))
+
+
+let doubleValue = 22.2111111
+print(doubleValue)
+print(String(format: "%.2f", doubleValue))
