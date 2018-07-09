@@ -1,13 +1,9 @@
 func groupingDishes(dishes: [[String]]) -> [[String]] {
     var ingredientDictionary: [String: [String]] = [:]
     var resultArray: [[String]] = []
-    for row in dishes {
-        for ingredient in row[1..<row.count] {
-            if ingredientDictionary[ingredient] != nil {
-                ingredientDictionary[ingredient] = ingredientDictionary[ingredient]! + [row.first!]
-            } else {
-                ingredientDictionary[ingredient] = [row.first!]
-            }
+    dishes.map { value in
+        value[1...].map {
+            ingredientDictionary[$0] = ingredientDictionary[$0] != nil ? ingredientDictionary[$0]! + [value.first!] : [value.first!]
         }
     }
     let newDictionary = ingredientDictionary.filter {
@@ -15,9 +11,8 @@ func groupingDishes(dishes: [[String]]) -> [[String]] {
         }.mapValues {
             $0.sorted()
     }
-    for key in newDictionary.keys.sorted() {
-        let row = [key] + newDictionary[key]!
-        resultArray.append(row)
+    newDictionary.keys.sorted().map {
+        resultArray.append([$0] + newDictionary[$0]!)
     }
     return resultArray
 }
