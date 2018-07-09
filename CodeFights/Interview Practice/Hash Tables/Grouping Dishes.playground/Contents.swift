@@ -23,3 +23,8 @@ print(groupingDishes(dishes: [["Pasta", "Tomato Sauce", "Onions", "Garlic"],
                               ["Salad", "Spinach", "Nuts"],
                               ["Sandwich", "Cheese", "Bread"],
                               ["Quesadilla", "Chicken", "Cheese"]]))
+
+
+//Swift in Linux sorting issue.
+let dishesArray: [String] = ["AQglifKDgZIivthzfoWRklaKs", "dLuvsltPzUjfXkynBCMgxBUTXhVCd", "GrWhROgzHXhYguurdcGjNAv"]
+print(dishesArray.sorted())
