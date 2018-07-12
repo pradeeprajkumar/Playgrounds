@@ -1,24 +1,17 @@
 func possibleSums(coins: [Int], quantity: [Int]) -> Int {
-    var sumsDictionary = [Int:[Int]]()
-    for (coin, coinQuantity) in zip(coins, quantity) {
-        sumsDictionary[coin] = [coin] + sumsDictionary.values.flatMap {
-            $0.map {
-                $0 + coin
+    var sumsSet = Set<Int>()
+    for (coin, quantity) in zip(coins, quantity) {
+        var tempSet = Set<Int>()
+        for times in 1 ... quantity {
+            tempSet.insert(coin * times)
+            sumsSet.map {
+                tempSet.insert($0 + coin * times)
             }
         }
-        if coinQuantity > 1 {
-            var times = coinQuantity - 1
-            let coinArray = sumsDictionary[coin]!
-            while times > 0 {
-                sumsDictionary[coin] = coinArray + sumsDictionary[coin]!.map {
-                    return $0 + coin
-                }
-                times -= 1
-            }
-        }
+        sumsSet = sumsSet.union(tempSet)
     }
-    print(Set(sumsDictionary.values.flatMap{ $0 }).sorted())
-    return Set(sumsDictionary.values.flatMap{ $0 }).count
+    return sumsSet.count
 }
 
 print(possibleSums(coins: [10, 50, 100], quantity: [1, 2, 1]))
+//print(possibleSums(coins: [1,2], quantity: [50000, 2]))
