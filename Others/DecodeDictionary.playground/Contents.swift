@@ -1,6 +1,4 @@
-
 import Foundation
-
 
 let json = """
 {
@@ -13,7 +11,6 @@ let json = """
     }
 }
 """.data(using: .utf8)! // our data in native format
-
 
 struct GroceryStore {
     struct Product {
