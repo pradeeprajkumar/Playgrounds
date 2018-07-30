@@ -3,7 +3,7 @@ func fibonacciNumber(n: Int) -> Int {
         return n
     }
     var prev1 = 0, prev2 = 1
-    var index = 2
+    var index = 1
     var result = 0
     while index < n {
         result = prev1 + prev2
@@ -14,4 +14,4 @@ func fibonacciNumber(n: Int) -> Int {
     return result
 }
 
-print(fibonacciNumber(n: 2))
+print(fibonacciNumber(n: 7))
