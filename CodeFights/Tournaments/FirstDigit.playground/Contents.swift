@@ -9,4 +9,3 @@ func firstDigit(inputString: String) -> Character {
 }
 
 print(firstDigit(inputString: "var7_1__I9nt"))
-
