@@ -5,60 +5,6 @@ class Tree: Decodable {
     var right: Tree?
 }
 
-var index = 0
-var kThValue = 3
-
-func countNodes(node: Tree?) {
-    if node == nil {
-        return
-    }
-    if node?.left == nil && node?.right == nil {
-        if index < 1 {
-            index = 1
-        }
-        return
-    }
-    //Left
-    index += 1
-    if index == kThValue {
-        debugPrint("found:\(node?.left?.value)")
-    }
-    countNodes(node: node?.left)
-    //Center
-    index += 1
-    if index == kThValue {
-        debugPrint("found:\(node?.value)")
-    }
-    countNodes(node: node?.right)
-    //Right
-    index += 1
-    if index == kThValue {
-        debugPrint("found:\(node?.right?.value)")
-    }
-    return
-}
-
-//func traverseInorder(node: Tree?) -> Int? {
-//    if node == nil {
-//        return nil
-//    }
-//    if node?.left == nil {
-//        if index < 1 {
-//            index = 1
-//        }
-//    }
-//    if index == kThValue {
-//        return node?.value
-//    }
-//    traverseInorder(node: node?.left)
-//    debugPrint(node!.value)
-//    index += 1
-//    traverseInorder(node: node?.right)
-//    if index == kThValue {
-//        return node?.value
-//    }
-//    index += 1
-//}
 
 let json = """
 {
@@ -85,12 +31,28 @@ let json = """
 """.data(using: .utf8)!
 
 let root = try? JSONDecoder().decode(Tree.self, from: json)
-countNodes(node: root)
 
-//func kthSmallestInBST(t: Tree?, k: Int) -> Int {
-//    kThValue = k
-//    traverseInorder(node: root)
-//    return 0
-//}
-//
-//debugPrint(kthSmallestInBST(t: root, k: 4))
+//In order traversal
+func getKthNode(_ node: Tree?, k: Int, index: inout Int, value: inout Int?) {
+    if node == nil || index >= k {
+        return
+    }
+    //Left
+    getKthNode(node?.left, k: k, index: &index, value: &value)
+    index += 1
+    if index == k {
+        value = node?.value
+    }
+    //Right
+    getKthNode(node?.right, k: k, index: &index, value: &value)
+}
+
+func kthSmallestInBST(t: Tree?, k: Int) -> Int {
+    var index = 0
+    var value: Int?
+    getKthNode(t, k: k, index: &index, value: &value)
+    return value ?? 0
+}
+
+
+debugPrint(kthSmallestInBST(t: root, k: 4))
