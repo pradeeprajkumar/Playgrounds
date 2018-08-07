@@ -1,5 +1,12 @@
-//: Playground - noun: a place where people can play
+func insertDashes(inputString: String) -> String {
+    var resultString = ""
+    for char in inputString {
+         if resultString.count > 0 && resultString.last != " " && char != " " {
+            resultString.append("-")
+        }
+        resultString.append(char)
+    }
+    return resultString
+}
 
-import UIKit
-
-var str = "Hello, playground"
+debugPrint(insertDashes(inputString: "aba caba"))
