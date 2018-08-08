@@ -1,4 +1,3 @@
 # Playgrounds
-A collection of playgrounds that I have created/used for various reasons.
+A collection of playgrounds that I have created/used for various reasons like Interview practice, Swift concepts, etc.
 
-Added swift code thats used for interview practice.
