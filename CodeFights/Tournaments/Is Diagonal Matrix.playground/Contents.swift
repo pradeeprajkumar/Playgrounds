@@ -3,7 +3,7 @@ func isDiagonalMatrix(matrix: [[Int]]) -> Bool {
     for i in 0 ..< matrix.count {
         for j in 0 ..< matrix[i].count {
             if columnIndex != j && matrix[i][j] != 0 {
-                //It should be zero                
+                //It should be zero
                 return false
             }
         }
